@@ -28,10 +28,8 @@ public class Utente {
 	private String nome;
 	@Column(name = "cognome")
 	private String cognome;
-	@Column(name = "dateCreated")
-	private LocalDate dateCreated;
-	@Column(name = "token")
-	private String token;
+	@Column(name = "dataDiNascita")
+	private LocalDate dataDiNascita;
 
 	@ManyToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name = "ruolo_id", nullable = false)
@@ -81,28 +79,20 @@ public class Utente {
 		this.cognome = cognome;
 	}
 
-	public LocalDate getDateCreated() {
-		return dateCreated;
-	}
-
-	public void setDateCreated(LocalDate dateCreated) {
-		this.dateCreated = dateCreated;
-	}
-
-	public String getToken() {
-		return token;
-	}
-
-	public void setToken(String token) {
-		this.token = token;
-	}
-
 	public Ruolo getRuolo() {
 		return ruolo;
 	}
 
 	public void setRuolo(Ruolo ruolo) {
 		this.ruolo = ruolo;
+	}
+
+	public LocalDate getDataDiNascita() {
+		return dataDiNascita;
+	}
+
+	public void setDataDiNascita(LocalDate dataDiNascita) {
+		this.dataDiNascita = dataDiNascita;
 	}
 
 }
