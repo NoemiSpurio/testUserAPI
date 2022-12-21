@@ -39,6 +39,15 @@ public class Utente {
 
 	}
 
+	public Utente(String username, String password, String nome, String cognome, LocalDate dataDiNascita) {
+		super();
+		this.username = username;
+		this.password = password;
+		this.nome = nome;
+		this.cognome = cognome;
+		this.dataDiNascita = dataDiNascita;
+	}
+
 	public Long getId() {
 		return id;
 	}
