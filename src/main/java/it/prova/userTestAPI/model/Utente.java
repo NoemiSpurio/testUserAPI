@@ -31,7 +31,7 @@ public class Utente {
 	@Column(name = "dataDiNascita")
 	private LocalDate dataDiNascita;
 
-	@ManyToOne(fetch = FetchType.LAZY)
+	@ManyToOne(fetch = FetchType.EAGER)
 	@JoinColumn(name = "ruolo_id", nullable = false)
 	private Ruolo ruolo;
 

@@ -1,7 +1,5 @@
 package it.prova.userTestAPI.security.dto;
 
-import java.util.List;
-
 public class UtenteInfoJWTResponseDTO {
 
 	private String nome;
@@ -9,14 +7,13 @@ public class UtenteInfoJWTResponseDTO {
 	private String type = "Bearer";
 	private String username;
 	private String email;
-	private List<String> roles;
+	private String ruolo;
 
-	public UtenteInfoJWTResponseDTO(String nome, String cognome, String username, String email, List<String> roles) {
+	public UtenteInfoJWTResponseDTO(String nome, String cognome, String username, String roles) {
 		this.nome = nome;
 		this.cognome = cognome;
 		this.username = username;
-		this.email = email;
-		this.roles = roles;
+		this.ruolo = roles;
 	}
 
 	public String getTokenType() {
@@ -43,8 +40,8 @@ public class UtenteInfoJWTResponseDTO {
 		this.username = username;
 	}
 
-	public List<String> getRoles() {
-		return roles;
+	public String getRoles() {
+		return ruolo;
 	}
 
 	public String getNome() {
